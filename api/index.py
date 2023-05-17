@@ -30,7 +30,8 @@ def sem_search(query):
 	results=[]
 	r=1
 	for result in xc['matches']:
-		results.append({'title': result['metadata']['question'], 'rank': 'Rank' + str(r)})
+		rn='Rank'+str(r)
+		results.append({'title': result['metadata']['question'], 'rank': rn})
 		r=r+1
 	return results
 
