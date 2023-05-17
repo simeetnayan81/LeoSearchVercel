@@ -28,8 +28,10 @@ def sem_search(query):
 	print('d2')
 	xc = pinecone_index.query(qemb, top_k=3, include_metadata=True)
 	results=[]
+	r=1
 	for result in xc['matches']:
-		results.append({'title': result['metadata']['question'], 'url':'google.com'})
+		results.append({'title': result['metadata']['question'], 'rank': 'Rank' + str(r)})
+		r=r+1
 	return results
 
 @app.route('/')
