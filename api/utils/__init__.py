@@ -1,5 +1,7 @@
 import pinecone
+
 from langchain.embeddings import HuggingFaceHubEmbeddings
+
 from utils.key import PINECONE_KEY, HUGGINGFACE_KEY
 
 pinecone.init(api_key=PINECONE_KEY, environment="asia-southeast1-gcp-free")
